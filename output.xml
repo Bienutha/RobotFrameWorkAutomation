@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 3.2.2 (Python 3.8.5 on win32)" generated="20210110 16:55:30.322" rpa="false">
+<suite id="s1" name="TestCase" source="C:\Users\Preethi\BookStore\TestCase.robot">
+<test id="s1-t1" name="Open Bookstore from the browser">
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>https://www.indiabookstore.net/</arg>
+<arg>gc</arg>
+</arguments>
+<msg timestamp="20210110 16:55:30.511" level="INFO">Opening browser 'gc' to base url 'https://www.indiabookstore.net/'.</msg>
+<status status="PASS" starttime="20210110 16:55:30.511" endtime="20210110 16:55:36.352"></status>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20210110 16:55:36.354" endtime="20210110 16:55:38.514"></status>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<arguments>
+<arg>Title-1.png</arg>
+</arguments>
+<msg timestamp="20210110 16:55:38.934" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="Title-1.png"&gt;&lt;img src="Title-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20210110 16:55:38.514" endtime="20210110 16:55:38.934"></status>
+</kw>
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<arguments>
+<arg>window.scrollTo(0,500)</arg>
+</arguments>
+<msg timestamp="20210110 16:55:38.937" level="INFO">Executing JavaScript:
+window.scrollTo(0,500)
+Without any arguments.</msg>
+<status status="PASS" starttime="20210110 16:55:38.934" endtime="20210110 16:55:38.948"></status>
+</kw>
+<tags>
+<tag>Book</tag>
+</tags>
+<status status="PASS" starttime="20210110 16:55:30.511" endtime="20210110 16:55:38.949" critical="yes"></status>
+</test>
+<test id="s1-t2" name="select a Category">
+<kw name="Mouse Down On Link" library="SeleniumLibrary">
+<doc>Simulates a mouse down event on a link identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://a[contains(text(),'Computing &amp; Internet')]</arg>
+</arguments>
+<status status="PASS" starttime="20210110 16:55:38.980" endtime="20210110 16:55:39.315"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>xpath://a[contains(text(),'Digital Media and Internet (0)')]</arg>
+</arguments>
+<status status="PASS" starttime="20210110 16:55:39.315" endtime="20210110 16:55:39.348"></status>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<arguments>
+<arg>Category-2.png</arg>
+</arguments>
+<msg timestamp="20210110 16:55:39.779" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="Category-2.png"&gt;&lt;img src="Category-2.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20210110 16:55:39.349" endtime="20210110 16:55:39.779"></status>
+</kw>
+<status status="PASS" starttime="20210110 16:55:38.978" endtime="20210110 16:55:39.780" critical="yes"></status>
+</test>
+<test id="s1-t3" name="Select a Sub Category">
+<kw name="Click Link" library="SeleniumLibrary">
+<doc>Clicks a link identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://a[contains(text(),'Digital Media and Internet (0)')]</arg>
+</arguments>
+<msg timestamp="20210110 16:55:39.789" level="INFO">Clicking link 'xpath://a[contains(text(),'Digital Media and Internet (0)')]'.</msg>
+<status status="PASS" starttime="20210110 16:55:39.789" endtime="20210110 16:55:40.382"></status>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<arguments>
+<arg>subcategory-3.png</arg>
+</arguments>
+<msg timestamp="20210110 16:55:40.853" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="subcategory-3.png"&gt;&lt;img src="subcategory-3.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20210110 16:55:40.383" endtime="20210110 16:55:40.853"></status>
+</kw>
+<status status="PASS" starttime="20210110 16:55:39.789" endtime="20210110 16:55:40.854" critical="yes"></status>
+</test>
+<test id="s1-t4" name="Select Book">
+<kw name="Click Image" library="SeleniumLibrary">
+<doc>Clicks an image identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://*[@id="9780596156718"]/a/div[2]/img</arg>
+</arguments>
+<msg timestamp="20210110 16:55:40.868" level="INFO">Clicking image 'xpath://*[@id="9780596156718"]/a/div[2]/img'.</msg>
+<status status="PASS" starttime="20210110 16:55:40.867" endtime="20210110 16:55:52.235"></status>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<arguments>
+<arg>Selectbook-4.png</arg>
+</arguments>
+<msg timestamp="20210110 16:55:52.718" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="Selectbook-4.png"&gt;&lt;img src="Selectbook-4.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20210110 16:55:52.236" endtime="20210110 16:55:52.718"></status>
+</kw>
+<status status="PASS" starttime="20210110 16:55:40.865" endtime="20210110 16:55:52.720" critical="yes"></status>
+</test>
+<test id="s1-t5" name="Purchase a Book">
+<kw name="Click Link" library="SeleniumLibrary">
+<doc>Clicks a link identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://*[@id="main-wrapper"]/div[5]/div[2]/div[3]/div/a[1]</arg>
+</arguments>
+<msg timestamp="20210110 16:55:52.732" level="INFO">Clicking link 'xpath://*[@id="main-wrapper"]/div[5]/div[2]/div[3]/div/a[1]'.</msg>
+<status status="PASS" starttime="20210110 16:55:52.732" endtime="20210110 16:55:52.831"></status>
+</kw>
+<status status="PASS" starttime="20210110 16:55:52.732" endtime="20210110 16:55:52.832" critical="yes"></status>
+</test>
+<test id="s1-t6" name="Redirecting to next window">
+<kw name="Select Window" library="SeleniumLibrary">
+<doc>DEPRECATED in SeleniumLibrary 4.0. , use `Switch Window` instead.</doc>
+<arguments>
+<arg>title=The Art of Community: Building, Managing, and Supporting Cooperation Over the Internet (English) by Jono Bacon - Compare price for The Art of Community: Building, Managing, and Supporting Cooperation Over the Internet (English) | IndiaBookStore.net</arg>
+</arguments>
+<status status="PASS" starttime="20210110 16:55:52.839" endtime="20210110 16:55:52.900"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>3s</arg>
+</arguments>
+<msg timestamp="20210110 16:55:55.909" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20210110 16:55:52.900" endtime="20210110 16:55:55.910"></status>
+</kw>
+<status status="PASS" starttime="20210110 16:55:52.838" endtime="20210110 16:55:55.911" critical="yes"></status>
+</test>
+<test id="s1-t7" name="Redirecting to purchase Window">
+<kw name="Select Window" library="SeleniumLibrary">
+<doc>DEPRECATED in SeleniumLibrary 4.0. , use `Switch Window` instead.</doc>
+<arguments>
+<arg>title=Buy The Art of Community: Building, Managing, and Supporting Cooperation Over the Internet Book Online at Low Prices in India | The Art of Community: Building, Managing, and Supporting Cooperation Over the Internet Reviews &amp; Ratings - Amazon.in</arg>
+</arguments>
+<status status="PASS" starttime="20210110 16:55:55.957" endtime="20210110 16:55:58.102"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>3s</arg>
+</arguments>
+<msg timestamp="20210110 16:56:01.113" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20210110 16:55:58.105" endtime="20210110 16:56:01.113"></status>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<arguments>
+<arg>Buy-5.png</arg>
+</arguments>
+<msg timestamp="20210110 16:56:01.583" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="Buy-5.png"&gt;&lt;img src="Buy-5.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20210110 16:56:01.114" endtime="20210110 16:56:01.584"></status>
+</kw>
+<status status="PASS" starttime="20210110 16:55:55.935" endtime="20210110 16:56:01.585" critical="yes"></status>
+</test>
+<test id="s1-t8" name="Add to Cart">
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://*[@id="add-to-cart-button"]</arg>
+</arguments>
+<msg timestamp="20210110 16:56:01.596" level="INFO">Clicking element 'xpath://*[@id="add-to-cart-button"]'.</msg>
+<status status="PASS" starttime="20210110 16:56:01.596" endtime="20210110 16:56:02.948"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>3s</arg>
+</arguments>
+<msg timestamp="20210110 16:56:05.955" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20210110 16:56:02.950" endtime="20210110 16:56:05.956"></status>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<arguments>
+<arg>Addcart-6.png</arg>
+</arguments>
+<msg timestamp="20210110 16:56:06.400" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="Addcart-6.png"&gt;&lt;img src="Addcart-6.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20210110 16:56:05.957" endtime="20210110 16:56:06.400"></status>
+</kw>
+<status status="PASS" starttime="20210110 16:56:01.591" endtime="20210110 16:56:06.403" critical="yes"></status>
+</test>
+<test id="s1-t9" name="Close Browser">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20210110 16:56:06.422" endtime="20210110 16:56:08.729"></status>
+</kw>
+<status status="PASS" starttime="20210110 16:56:06.421" endtime="20210110 16:56:08.731" critical="yes"></status>
+</test>
+<status status="PASS" starttime="20210110 16:55:30.324" endtime="20210110 16:56:08.741"></status>
+</suite>
+<statistics>
+<total>
+<stat pass="9" fail="0">Critical Tests</stat>
+<stat pass="9" fail="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="1" fail="0">Book</stat>
+</tag>
+<suite>
+<stat pass="9" fail="0" id="s1" name="TestCase">TestCase</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
